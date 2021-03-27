@@ -21,7 +21,7 @@ namespace EsDatabase
             DA = new System.Data.SqlClient.SqlDataAdapter();
             Dati = new System.Data.DataSet();
 
-            CN.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=..\Canzoni.mdf;Integrated Security=True;Connect Timeout=30";
+            CN.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + HttpContext.Current.Server.MapPath("~") + @"Canzoni.mdf" + ";Integrated Security=True;Connect Timeout=30";
             CN.Open();
             CM.Connection = CN;
             CM.CommandType = System.Data.CommandType.Text;
