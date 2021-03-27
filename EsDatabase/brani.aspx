@@ -16,7 +16,7 @@
         System.Data.SqlClient.SqlDataAdapter DA = new System.Data.SqlClient.SqlDataAdapter();
         System.Data.DataSet Dati = new System.Data.DataSet();
 
-        CN.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename"+ HttpContext.Current.Server.MapPath("~") + @"Canzoni.mdf" + ";Integrated Security=True;Connect Timeout=30";
+        CN.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ HttpContext.Current.Server.MapPath("~") + @"Canzoni.mdf" + ";Integrated Security=True;Connect Timeout=30";
         CN.Open();
         CM.Connection = CN;
         CM.CommandType = System.Data.CommandType.Text;
